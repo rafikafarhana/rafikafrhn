@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/src/widgets/container.dart';
-import 'package:flutter/src/widgets/framework.dart';
 
-class MyWidget extends StatelessWidget {
-  const MyWidget({super.key});
+class SecondPage extends StatelessWidget {
+  SecondPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -12,27 +10,34 @@ class MyWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Container(
-            color: Colors.green,
-            child:Image.network(
-            "................................"
-            height: 90,
-            width: 90,
-          )
-          )
+            color: Colors.white,
+            child: Center(
+              child: Image.asset(
+                "assets/signature.png",
+                height: 90,
+                width: 100,
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
           Container(
-            color: Colors.green,
-            child:Image.asset(
-            "buku.jpeg"
-            height: 90,
-            width: 90,
-          )
-          )
+            color: Colors.white,
+            child: Center(
+              child: Image.asset(
+                "assets/signature.png",
+                height: 90,
+                width: 100,
+              ),
+            ),
+          ),
+          const SizedBox(height: 10),
           TextButton(
-            onPressed: () {},
-            child: const Text("Kembali kehalam sebelumnya"),
-          )
+              onPressed: () {
+                Navigator.pop(context);
+              },
+              child: Text("Kembali ke Halaman Home"))
         ],
-        ),
+      ),
     );
   }
 }
